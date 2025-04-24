@@ -1,0 +1,72 @@
+/* Configuración global */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+/* Contenedor principal */
+.container {
+    width: 80%;
+    margin: auto;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Títulos */
+h1 {
+    text-align: center;
+    color: #000;
+}
+
+.subtitle {
+    text-align: center;
+    font-style: italic;
+    color: #555;
+}
+
+/* Estilo de cada oferta de trabajo */
+.job {
+    border-bottom: 1px solid #ddd;
+    padding: 20px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* Contenido del trabajo */
+.job-content {
+    width: 70%;
+}
+
+/* Estilo de las imágenes */
+.job img {
+    width: 200px;
+    height: auto;
+    border-radius: 10px;
+}
+
+/* Botón de solicitud */
+.apply-button a:hover {
+    display: inline-block;
+    padding: 10px 15px;
+    background: red;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+/* Diseño responsivo */
+@media (max-width: 768px) {
+    .job {
+        flex-direction: column;
+        text-align: center;
+    }
+    .job-content {
+        width: 100%;
+    }
+}
