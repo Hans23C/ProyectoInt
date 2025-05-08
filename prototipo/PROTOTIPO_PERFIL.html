@@ -1,65 +1,135 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Prototipo Perfil</title>
-    <link rel="stylesheet" href="styless.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Prototipo Perfil Mejorado</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+  <style>
+    body {
+      background-color: #f0f2f5;
+    }
+    .profile-card {
+      background-color: #ffffff;
+      border-radius: 1rem;
+      padding: 2rem;
+      box-shadow: 0 0.25rem 0.75rem rgba(0,0,0,0.1);
+    }
+    .image-box {
+      width: 200px;
+      height: 200px;
+      background-color: #dee2e6;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+      overflow: hidden;
+      margin: auto;
+      margin-bottom: 1rem;
+    }
+    .image-upload {
+      cursor: pointer;
+      color: #0d6efd;
+      text-decoration: underline;
+    }
+    .form-section {
+      background-color: #fff;
+      padding: 2rem;
+      border-radius: 1rem;
+      box-shadow: 0 0.25rem 0.75rem rgba(0,0,0,0.05);
+    }
+  </style>
 </head>
 <body>
-    <div class="container">
-        <div class="header">
-            <h1>Site name</h1>
-            <nav>
-                <a href="#">PAGE</a>
-                <a href="#">PAGE</a>
-                <a href="#">PAGE</a>
-            </nav>
-            <button class="button">BUTTON</button>
-        </div>
-        <div class="profile">
-            <div class="data">
-                <h2>CRISTIAN</h2>
-                <h3>ING. SISTEMAS COMPUTACIONALES</h3>
-                <p><strong>DESARROLLO DE SOFTWARE</strong></p>
-                <ul>
-                    <li>Programación en Java, Python, C++, etc.</li>
-                    <li>Desarrollo de aplicaciones móviles y web.</li>
-                    <li>Creación y gestión de bases de datos.</li>
-                    <li>Uso de frameworks y librerías.</li>
-                </ul>
-                <p><strong>ADMINISTRACIÓN DE BASES DE DATOS</strong></p>
-                <ul>
-                    <li>Diseño, implementación y optimización.</li>
-                    <li>Manejo de SQL y NoSQL (MySQL, PostgreSQL, MongoDB).</li>
-                    <li>Seguridad y respaldo de datos.</li>
-                </ul>
-            </div>
-            <div class="image-container">
-                <div class="image-box" id="imagePreview">
-                    <img id="profileImage" src="" alt="Imagen" style="width: 100%; height: 100%; border-radius: 50%; display: none;">
-                </div>
-                <label for="file-upload" class="image-upload">AGREGAR IMAGEN</label>
-                <input type="file" id="file-upload" style="display: none;" accept="image/*">
-            </div>
-        </div>
-        <div class="form">
-            <h3>DATOS PERSONALES</h3>
-            <label for="nombre">NOMBRE</label>
-            <input type="text" id="nombre" placeholder="Escribe tu nombre">
-            
-            <label for="apellido">APELLIDO</label>
-            <input type="text" id="apellido" placeholder="Escribe tu apellido">
-            
-            <label for="email">CORREO</label>
-            <input type="email" id="email" placeholder="Escribe tu correo">
-        </div>
-        <div class="descripcion">
-            <h3>DESCRIPCIÓN</h3>
-            <textarea id="descripcion" placeholder="Escribe aquí..."></textarea>
-        </div>
-        <button class="button">AGREGAR</button>
+  <div class="container py-5">
+    <!-- Header -->
+    <div class="d-flex justify-content-between align-items-center mb-4">
+      <h1 class="fw-bold text-primary">Mi Perfil</h1>
+      <nav class="d-flex gap-3">
+        <a href="#" class="btn btn-outline-secondary">Inicio</a>
+        <a href="#" class="btn btn-outline-secondary">Proyectos</a>
+        <a href="#" class="btn btn-outline-secondary">Contacto</a>
+      </nav>
+      <button class="btn btn-primary">Salir</button>
     </div>
-    <script src="script.js"></script>
+
+    <!-- Profile Card -->
+    <div class="row g-4">
+      <div class="col-lg-8">
+        <div class="profile-card">
+          <h2 class="text-primary">CRISTIAN</h2>
+          <h5 class="text-muted">Ing. Sistemas Computacionales</h5>
+          <hr>
+          <p class="fw-bold">Desarrollo de Software</p>
+          <ul>
+            <li>Programación en Java, Python, C++, etc.</li>
+            <li>Aplicaciones móviles y web.</li>
+            <li>Gestión de bases de datos.</li>
+            <li>Uso de frameworks y librerías.</li>
+          </ul>
+          <p class="fw-bold mt-3">Administración de Bases de Datos</p>
+          <ul>
+            <li>Diseño e implementación.</li>
+            <li>SQL y NoSQL (MySQL, PostgreSQL, MongoDB).</li>
+            <li>Seguridad y respaldo de datos.</li>
+          </ul>
+        </div>
+      </div>
+      <div class="col-lg-4">
+        <div class="form-section text-center">
+          <div class="image-box" id="imagePreview">
+            <img id="profileImage" src="" alt="Imagen" class="img-fluid" style="display: none;" />
+          </div>
+          <label for="file-upload" class="btn btn-outline-primary">
+            <i class="bi bi-upload"></i> Subir Imagen
+          </label>
+          <input type="file" id="file-upload" accept="image/*" style="display: none;" />
+        </div>
+      </div>
+    </div>
+
+    <!-- Formulario -->
+    <div class="form-section mt-4">
+      <h3 class="text-primary mb-3">Datos Personales</h3>
+      <div class="row g-3">
+        <div class="col-md-6">
+          <label for="nombre" class="form-label">Nombre</label>
+          <input type="text" id="nombre" class="form-control" placeholder="Escribe tu nombre" />
+        </div>
+        <div class="col-md-6">
+          <label for="apellido" class="form-label">Apellido</label>
+          <input type="text" id="apellido" class="form-control" placeholder="Escribe tu apellido" />
+        </div>
+        <div class="col-md-6">
+          <label for="email" class="form-label">Correo</label>
+          <input type="email" id="email" class="form-control" placeholder="Escribe tu correo" />
+        </div>
+      </div>
+
+      <!-- Descripción -->
+      <div class="mt-4">
+        <label for="descripcion" class="form-label">Descripción</label>
+        <textarea id="descripcion" class="form-control" rows="4" placeholder="Escribe aquí..."></textarea>
+      </div>
+
+      <button class="btn btn-success mt-4 px-4">Agregar</button>
+    </div>
+  </div>
+
+  <script>
+    document.getElementById("file-upload").addEventListener("change", function () {
+      const file = this.files[0];
+      if (file) {
+        const reader = new FileReader();
+        reader.onload = function (e) {
+          const img = document.getElementById("profileImage");
+          img.src = e.target.result;
+          img.style.display = "block";
+        };
+        reader.readAsDataURL(file);
+      }
+    });
+  </script>
 </body>
 </html>
