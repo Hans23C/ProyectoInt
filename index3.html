@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Semestres de Ingeniería</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      margin: 20px;
+      background: #f2f2f2;
+    }
+    .tabs {
+      display: flex;
+      flex-wrap: wrap;
+      margin-bottom: 10px;
+    }
+    .tabs button {
+      background: #ccc;
+      border: none;
+      padding: 10px 15px;
+      margin: 2px;
+      cursor: pointer;
+      border-radius: 5px 5px 0 0;
+    }
+    .tabs button.active {
+      background: #fff;
+      border-bottom: 2px solid white;
+      font-weight: bold;
+    }
+    .tab-content {
+      background: white;
+      border-radius: 0 5px 5px 5px;
+      padding: 20px;
+      box-shadow: 0 0 10px #aaa;
+    }
+    .subject {
+      background: #e0e0e0;
+      margin: 5px 0;
+      padding: 10px;
+      border-radius: 5px;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Plan de Estudios ISC</h1>
+
+  <div class="tabs" id="tabs"></div>
+  <div class="tab-content" id="content"></div>
+
+  <script>
+    const semestres = {
+      "1°": ["Matemáticas I", "Fundamentos de Programación", "Taller de Ética", "Computación Básica"],
+      "2°": ["Matemáticas II", "Programación Orientada a Objetos", "Contabilidad", "Algoritmos y Estructuras"],
+      "3°": ["Matemáticas III", "Bases de Datos I", "POO Avanzada", "Sistemas Digitales"],
+      "4°": ["Sistemas Operativos", "Ingeniería de Software", "Redes de Computadoras"],
+      "5°": ["Programación Web", "Admin de BD", "Simulación", "Arquitectura Software"],
+      "6°": ["IA", "Programación Lógica", "Seguridad Informática"],
+      "7°": ["Web Avanzada", "Big Data", "Cloud Computing", "IoT", "Seminario I"],
+      "8°": ["Innovación", "Auditoría", "Seminario II", "Optativa I"],
+      "9°": ["Optativa II", "Proyecto Final", "Servicio Social"],
+      "10°": ["Certificación", "Desarrollo Profesional", "Optativa III"],
+      "11°": ["Residencias Profesionales", "Evaluación de Proyectos", "Emprendimiento"]
+    };
+
+    const tabs = document.getElementById("tabs");
+    const content = document.getElementById("content");
+
+    Object.keys(semestres).forEach((sem, index) => {
+      const btn = document.createElement("button");
+      btn.textContent = `Semestre ${sem}`;
+      btn.onclick = () => {
+        document.querySelectorAll(".tabs button").forEach(b => b.classList.remove("active"));
+        btn.classList.add("active");
+        content.innerHTML = semestres[sem].map(m => `<div class="subject">${m}</div>`).join("");
+      };
+      if (index === 0) btn.classList.add("active");
+      tabs.appendChild(btn);
+    });
+
+    // Cargar el primer semestre por defecto
+    content.innerHTML = semestres["1°"].map(m => `<div class="subject">${m}</div>`).join("");
+  </script>
+
+</body>
+</html>
