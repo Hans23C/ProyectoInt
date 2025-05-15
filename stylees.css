@@ -1,0 +1,23 @@
+ 
+        body {
+            background-color: #faf5f5;
+        }
+        .hero {
+            position: relative;
+            text-align: center;
+            color: rgb(194, 21, 21);
+            background: url('https://source.unsplash.com/1600x600/?pear') no-repeat center center/cover;
+            padding: 100px 20px;
+        }
+        .hero h1 {
+            font-size: 2.5rem;
+            font-weight: bold;
+        }
+        .section {
+            padding: 40px 20px;
+        }
+        .card img {
+            height: 200px;
+            object-fit: cover;
+        }
+    

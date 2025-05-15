@@ -1,0 +1,195 @@
+/* Configuración general */
+body {
+    font-family: 'Arial', sans-serif;
+    background: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+/* Contenedor principal */
+.container {
+    width: 80%;
+    margin: auto;
+    background: white;
+    padding: 20px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+/* Cabecera */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #007bff;
+    color: white;
+    padding: 15px 20px;
+    border-radius: 10px 10px 0 0;
+}
+
+.header h1 {
+    margin: 0;
+    font-size: 24px;
+}
+
+.header nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 10px;
+    font-weight: bold;
+}
+
+.header .button {
+    background: white;
+    color: #007bff;
+    padding: 8px 15px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.header .button:hover {
+    background: #0056b3;
+    color: white;
+}
+
+/* Perfil */
+.profile {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: left;
+    padding: 20px;
+}
+
+.data {
+    flex: 2;
+    padding-right: 20px;
+}
+
+.data h2 {
+    color: #007bff;
+}
+
+.data h3 {
+    color: #333;
+}
+
+.data p {
+    font-weight: bold;
+    color: #444;
+    margin-top: 10px;
+}
+
+.data ul {
+    list-style: none;
+    padding: 0;
+}
+
+.data li {
+    background: #007bff;
+    color: white;
+    padding: 5px 10px;
+    margin: 5px 0;
+    border-radius: 5px;
+}
+
+/* Imagen */
+.image-container {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.image-box {
+    width: 150px;
+    height: 150px;
+    background: #ddd;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    margin-bottom: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.image-upload {
+    background: #28a745;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+    width: 150px;
+}
+
+.image-upload:hover {
+    background: #218838;
+}
+
+/* Formulario */
+.form {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    background: #f8f9fa;
+    border-radius: 10px;
+}
+
+.form h3 {
+    color: #007bff;
+    margin-bottom: 10px;
+}
+
+.form label {
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.form input {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* Descripción */
+.descripcion {
+    padding: 20px;
+}
+
+.descripcion h3 {
+    color: #007bff;
+}
+
+textarea {
+    width: 100%;
+    height: 100px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+/* Botón general */
+.button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background: #007bff;
+    color: white;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+.button:hover {
+    background: #0056b3;
+}

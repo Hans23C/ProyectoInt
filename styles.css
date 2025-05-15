@@ -1,0 +1,16 @@
+body {
+    font-family: Arial, sans-serif;
+}
+
+.container h2 {
+    margin-top: 30px;
+}
+
+.job-listing {
+    border-bottom: 1px solid #ddd;
+    padding: 10px 0;
+}
+
+footer {
+    margin-top: 30px;
+}
