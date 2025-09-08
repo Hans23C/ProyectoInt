@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prototipo Perfil</title>
+    <link rel="stylesheet" href="styless.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Site name</h1>
+            <nav>
+                <a href="#">PAGE</a>
+                <a href="#">PAGE</a>
+                <a href="#">PAGE</a>
+            </nav>
+            <button class="button">BUTTON</button>
+        </div>
+        <div class="profile">
+            <div class="data">
+                <h2>CRISTIAN</h2>
+                <h3>ING. SISTEMAS COMPUTACIONALES</h3>
+                <p><strong>DESARROLLO DE SOFTWARE</strong></p>
+                <ul>
+                    <li>Programación en Java, Python, C++, etc.</li>
+                    <li>Desarrollo de aplicaciones móviles y web.</li>
+                    <li>Creación y gestión de bases de datos.</li>
+                    <li>Uso de frameworks y librerías.</li>
+                </ul>
+                <p><strong>ADMINISTRACIÓN DE BASES DE DATOS</strong></p>
+                <ul>
+                    <li>Diseño, implementación y optimización.</li>
+                    <li>Manejo de SQL y NoSQL (MySQL, PostgreSQL, MongoDB).</li>
+                    <li>Seguridad y respaldo de datos.</li>
+                </ul>
+            </div>
+            <div class="image-container">
+                <div class="image-box" id="imagePreview">
+                    <img id="profileImage" src="" alt="Imagen" style="width: 100%; height: 100%; border-radius: 50%; display: none;">
+                </div>
+                <label for="file-upload" class="image-upload">AGREGAR IMAGEN</label>
+                <input type="file" id="file-upload" style="display: none;" accept="image/*">
+            </div>
+        </div>
+        <div class="form">
+            <h3>DATOS PERSONALES</h3>
+            <label for="nombre">NOMBRE</label>
+            <input type="text" id="nombre" placeholder="Escribe tu nombre">
+            
+            <label for="apellido">APELLIDO</label>
+            <input type="text" id="apellido" placeholder="Escribe tu apellido">
+            
+            <label for="email">CORREO</label>
+            <input type="email" id="email" placeholder="Escribe tu correo">
+        </div>
+        <div class="descripcion">
+            <h3>DESCRIPCIÓN</h3>
+            <textarea id="descripcion" placeholder="Escribe aquí..."></textarea>
+        </div>
+        <button class="button">AGREGAR</button>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
